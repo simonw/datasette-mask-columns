@@ -14,7 +14,7 @@ This depends on plugin hook changes in a not-yet released branch of Datasette. S
 
 ## Usage
 
-In your `metadata.json` file add a section like this descripibing the database and table in which you wish to mask columns:
+In your `metadata.json` file add a section like this describing the database and table in which you wish to mask columns:
 
 ```json
 {
