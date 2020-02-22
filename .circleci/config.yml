@@ -44,8 +44,7 @@ jobs:
           name: run tests
           command: |
             . venv/bin/activate
-            pip install -e .
-            pip install pytest
+            pip install -e .[test]
             pytest
   test-python-install:
     parameters:
@@ -72,8 +71,7 @@ jobs:
           name: run tests
           command: |
             . venv/bin/activate
-            pip install -e .
-            pip install pytest
+            pip install -e .[test]
             pytest
   deploy:
     docker:
