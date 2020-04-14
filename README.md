@@ -29,4 +29,6 @@ In your `metadata.json` file add a section like this describing the database and
     }
 }
 ```
-All database queries against the `users` table in `my-database.db` will now return `null` for the `password` column, no matter what value that column actually holds.
+All SQL queries against the `users` table in `my-database.db` will now return `null` for the `password` column, no matter what value that column actually holds.
+
+The table page for `users` will display the text `REDACTED` in the masked column. This visual hint will only be available on the table page; it will not display his text for arbitrary queries against the table.
