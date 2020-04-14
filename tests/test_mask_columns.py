@@ -15,9 +15,9 @@ async def test_datasette_mask_columns(tmpdir):
         response = await client.get("http://localhost/foo/users.json?_shape=array")
         assert 200 == response.status_code
         assert [{"rowid": 1, "id": 1, "password": "secret"}] == response.json()
-        # The text '<redacted>' should not show up on the table page
+        # The text 'REDACTED' should not show up on the table page
         html_response = await client.get("http://localhost/foo/users")
-        assert b"redacted" not in html_response.content
+        assert b"REDACTED" not in html_response.content
     # With the plugin:
     datasette2 = Datasette(
         [path],
@@ -32,6 +32,6 @@ async def test_datasette_mask_columns(tmpdir):
         response = await client.get("http://localhost/foo/users.json?_shape=array")
         assert 200 == response.status_code
         assert [{"rowid": 1, "id": 1, "password": None}] == response.json()
-        # The text '<redacted>' SHOULD show up on the table page
+        # The text 'REDACTED' SHOULD show up on the table page
         html_response = await client.get("http://localhost/foo/users")
-        assert b"redacted" in html_response.content
+        assert b"REDACTED" in html_response.content
