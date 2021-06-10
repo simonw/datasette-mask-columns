@@ -23,7 +23,7 @@ setup(
     version=VERSION,
     packages=["datasette_mask_columns"],
     entry_points={"datasette": ["mask_columns = datasette_mask_columns"]},
-    install_requires=["datasette~=0.36"],
+    install_requires=["datasette"],
     extras_require={"test": ["pytest", "pytest-asyncio", "httpx", "sqlite-utils"]},
     tests_require=["datasette-mask-columns[test]"],
 )
