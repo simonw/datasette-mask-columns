@@ -1,8 +1,9 @@
 # datasette-mask-columns
 
 [![PyPI](https://img.shields.io/pypi/v/datasette-mask-columns.svg)](https://pypi.org/project/datasette-mask-columns/)
-[![CircleCI](https://circleci.com/gh/simonw/datasette-mask-columns.svg?style=svg)](https://circleci.com/gh/simonw/datasette-mask-columns)
-[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/simonw/datasette-mask-columns/blob/master/LICENSE)
+[![Changelog](https://img.shields.io/github/v/release/simonw/datasette-mask-columns?include_prereleases&label=changelog)](https://github.com/simonw/datasette-mask-columns/releases)
+[![Tests](https://github.com/simonw/datasette-mask-columns/workflows/Test/badge.svg)](https://github.com/simonw/datasette-mask-columns/actions?query=workflow%3ATest)
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/simonw/datasette-mask-columns/blob/main/LICENSE)
 
 Datasette plugin that masks specified database columns
 
