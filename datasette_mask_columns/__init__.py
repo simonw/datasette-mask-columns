@@ -1,5 +1,5 @@
 from datasette import hookimpl
-import jinja2
+from markupsafe import Markup
 import sqlite3
 
 
@@ -31,6 +31,6 @@ def render_cell(column, table, database, datasette):
     masks = datasette.plugin_config("datasette-mask-columns", database=database) or {}
     columns_to_mask = masks.get(table) or set()
     if column in columns_to_mask:
-        return jinja2.Markup(
+        return Markup(
             '<span style="font-size: 0.8em; color: red; opacity: 0.8">REDACTED</span>'
         )
