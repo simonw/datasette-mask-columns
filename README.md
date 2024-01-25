@@ -11,8 +11,6 @@ Datasette plugin that masks specified database columns
 
     pip install datasette-mask-columns
 
-This depends on plugin hook changes in a not-yet released branch of Datasette. See [issue #678](https://github.com/simonw/datasette/issues/678) for details.
-
 ## Usage
 
 In your `metadata.json` file add a section like this describing the database and table in which you wish to mask columns:
